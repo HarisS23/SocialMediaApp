@@ -1,0 +1,26 @@
+<div class="container-fluid row posts-navbar">
+    <div class="col-md-3">
+        <h2 class="trending-text">Trending posts</h2>
+    </div>
+    <div class="col-md-6 row">
+        <div class="input-area">
+            <input name="search" 
+                class="input-field" 
+                type="text" 
+                [(ngModel)]="filterText"
+                (keydown.enter)="filterPosts()">
+            <div class="labelline" [ngClass]="textExistsClasses">Search</div>
+        </div>
+        <button class="search-button" (click)="filterPosts()">Search</button>
+    </div>
+    <div class="col-md-3">
+        <div class="button-container">
+            <button class="add-button" type="submit" (click)="openNewPostModal()">Add new post</button>
+        </div>
+    </div>
+</div>
+<div class="posts-container">
+    <div class="post-element" *ngFor="let p of filteredPosts">
+        <app-post [post]="p" (click)="openPostDetailsModal(p)"></app-post>
+    </div>
+</div>

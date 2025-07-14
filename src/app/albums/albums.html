@@ -1,0 +1,11 @@
+<div class="container-fluid">
+    <div class="search-container">
+        <label>Search albums:</label>
+        <input type="text" class="search-albums" [(ngModel)]="filterText" (input)="filterAlbums()">
+    </div>
+    <div class="albums-container">
+        @for (a of filteredAlbums; track a) {
+            <app-album [album]="a"></app-album>
+        }
+    </div>
+</div>

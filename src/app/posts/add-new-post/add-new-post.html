@@ -1,0 +1,30 @@
+<div class="form-container" [formGroup]="form">
+    <h3 class="title">Add new post</h3>
+    <div class="add-post-form container-fluid">
+        <label class="username-label">Username</label>
+        <input name="username" class="input-field" formControlName="username">
+        @if (form.controls.username.invalid && form.controls.username.touched){
+            <small class="error">Username is not valid</small>
+        }
+    </div>
+    <div class="add-post-form container-fluid">
+        <label class="title-label">Title</label>
+        <input name="title" class="input-field" formControlName="title">
+        @if (form.controls.title.invalid && form.controls.title.touched){
+            <small class="error">Title is not valid</small>
+        }
+    </div>
+    <div class="add-post-form container-fluid">
+        <label class="body-label">Content</label>
+        <textarea name="body" class="input-field" rows="3" formControlName="body"></textarea>
+        @if (form.controls.body.invalid && form.controls.body.touched){
+            <small class="error">Content is not valid</small>
+        }
+    </div>
+    <div class="submit-container">
+        <button type="submit" class="submit-btn" (click)="submitNewPost()">Submit</button>
+    </div>
+    @if (postAdded){
+        <div class="success-message">Post successfuly added!</div>
+    }
+</div>
