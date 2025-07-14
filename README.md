@@ -1,4 +1,4 @@
-# 📱 MiniSocial - Angular Social Media Practice App
+# 📱 SocialMediaApp- Angular Social Media Practice App
 
 SocialMediaApp is a small-scale practice project built with **Angular**, designed to simulate the core features of a basic social media platform. It helps in learning and implementing fundamental concepts such as component communication, routing, services, forms, and HTTP requests.
 
