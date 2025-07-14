@@ -3,18 +3,29 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
+import { Header } from './header/header';
+import { Footer } from './footer/footer';
+import { PostsModule } from './posts/posts-module';
+import { FormsModule } from '@angular/forms';
+import { provideHttpClient } from '@angular/common/http';
+import { AlbumsModule } from './albums/albums-module';
 
 @NgModule({
   declarations: [
-    App
+    App,
+    Header,
+    Footer
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PostsModule,
+    AlbumsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideClientHydration(withEventReplay())
+    provideClientHydration(withEventReplay()),
+    provideHttpClient()
   ],
   bootstrap: [App]
 })

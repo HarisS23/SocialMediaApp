@@ -1,0 +1,34 @@
+.container-fluid{
+    padding: 0 50px 50px 50px;
+}
+.search-container{
+    padding: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    label{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+}
+.search-albums{
+    width: 100%;
+    height: 40px;
+    border: 1px solid lightgray;
+    border-radius: 10px;   
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: all 0.2s;
+}
+.search-albums:focus{
+    transform: scale(1.1);
+}
+.albums-container{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: grid;
+    grid-auto-rows: 200px;
+    grid-template-columns: repeat(auto-fit, 380px);
+    grid-gap: 50px;
+    justify-content: center;
+    margin: 10px;
+}
+

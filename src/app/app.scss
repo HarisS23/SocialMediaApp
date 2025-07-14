@@ -1,0 +1,14 @@
+.footer{
+    width: 100%;
+    height:30%;
+}
+.routeroutlet{
+    min-height: 60%;
+    background-color: rgb(255, 255, 255);
+    overflow: auto;
+}
+.app-container{
+    display: grid;
+    min-height: 100dvh;
+    grid-template-rows: auto 1fr auto;
+}
